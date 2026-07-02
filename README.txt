@@ -125,3 +125,11 @@ v39 수정사항:
 - 출간 교재 설명 한 줄 고정
 - HTML/CSS/JS 동시 강제 적용
 - 캐시 방지 v39 적용
+
+
+v40 전체 패키지:
+- assets 폴더 포함
+- style.css / script.js 포함
+- index.html / author.html / privacy.html / terms.html 포함
+- 모바일 로고 위치 조정
+- 저자직강 무료강의 버튼 아이콘을 오른쪽으로 이동

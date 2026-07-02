@@ -7,8 +7,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
-  <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=23">
-  <link rel="stylesheet" href="./style.css?v=39">
+  <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=40">
+  <link rel="stylesheet" href="./style.css?v=40">
   <title>이용약관 | 네오스터디</title>
 
   <style>
@@ -269,6 +269,53 @@
 
   </style>
 
+
+
+  <style id="v40-mobile-logo-button-fix">
+/* v40 FORCE mobile logo + hero secondary icon */
+@media screen and (max-width: 900px){
+  html body .header{
+    padding:18px 14px 12px 10px !important;
+  }
+  html body .header .logo{
+    width:156px !important;
+    max-width:156px !important;
+    margin:0 0 14px -2px !important;
+  }
+  html body .header .logo-horizontal{
+    width:156px !important;
+    max-width:156px !important;
+  }
+  html body .hero-secondary{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:10px !important;
+    flex-direction:row !important;
+  }
+  html body .hero-secondary .play-dot{
+    order:2 !important;
+    margin:0 0 0 4px !important;
+    display:inline-grid !important;
+    place-items:center !important;
+  }
+}
+@media screen and (max-width: 430px){
+  html body .header{
+    padding:16px 12px 12px 8px !important;
+  }
+  html body .header .logo{
+    width:150px !important;
+    max-width:150px !important;
+    margin:0 0 12px -2px !important;
+  }
+  html body .header .logo-horizontal{
+    width:150px !important;
+    max-width:150px !important;
+  }
+}
+  </style>
+
 </head>
 <body>
 <main class="policy-page">
@@ -362,7 +409,7 @@ document.addEventListener('DOMContentLoaded', function(){
     logo.style.overflow = 'visible';
   }
   if(horizontal){
-    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=37');
+    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=40');
     horizontal.style.display = 'block';
     horizontal.style.width = size;
     horizontal.style.maxWidth = size;
@@ -413,6 +460,67 @@ document.addEventListener('DOMContentLoaded', function(){
       }
     }
   });
+});
+</script>
+
+
+
+<script id="v40-mobile-logo-button-fix-js">
+document.addEventListener('DOMContentLoaded', function(){
+  if(!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
+
+  var logo = document.querySelector('.header .logo');
+  var horizontal = document.querySelector('.header .logo-horizontal');
+  var stack = document.querySelector('.header .logo-stack');
+  var mobileW = window.innerWidth <= 430 ? '150px' : '156px';
+  if(logo){
+    logo.style.display = 'block';
+    logo.style.width = mobileW;
+    logo.style.maxWidth = mobileW;
+    logo.style.height = 'auto';
+    logo.style.margin = '0 0 12px -2px';
+    logo.style.padding = '0';
+    logo.style.transform = 'none';
+    logo.style.overflow = 'visible';
+  }
+  if(horizontal){
+    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=40');
+    horizontal.style.display = 'block';
+    horizontal.style.width = mobileW;
+    horizontal.style.maxWidth = mobileW;
+    horizontal.style.height = 'auto';
+    horizontal.style.objectFit = 'contain';
+    horizontal.style.background = 'transparent';
+  }
+  if(stack){ stack.style.display = 'none'; }
+
+  var header = document.querySelector('.header');
+  if(header){
+    header.style.paddingTop = '16px';
+    header.style.paddingRight = window.innerWidth <= 430 ? '12px' : '14px';
+    header.style.paddingBottom = '12px';
+    header.style.paddingLeft = window.innerWidth <= 430 ? '8px' : '10px';
+    header.style.alignItems = 'flex-start';
+    header.style.textAlign = 'left';
+  }
+
+  var btn = document.querySelector('.hero-secondary');
+  if(btn){
+    var icon = btn.querySelector('.play-dot');
+    if(icon){
+      btn.appendChild(icon);
+      icon.style.marginLeft = '4px';
+      icon.style.marginRight = '0';
+    }
+    btn.style.display = 'flex';
+    btn.style.alignItems = 'center';
+    btn.style.justifyContent = 'center';
+    btn.style.gap = '10px';
+    var textNodes = Array.from(btn.childNodes).filter(function(n){
+      return n.nodeType === 3 && n.textContent.trim();
+    });
+    textNodes.forEach(function(n){ n.textContent = '저자직강 무료강의 '; });
+  }
 });
 </script>
 
