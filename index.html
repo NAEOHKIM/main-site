@@ -9,7 +9,7 @@
 
   <title>네오스터디 | 안전보건 자격증 교재</title>
   <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=23">
-  <link rel="stylesheet" href="./style.css?v=30">
+  <link rel="stylesheet" href="./style.css?v=33">
 
   <style>
     /* v21 critical inline fix */
@@ -287,12 +287,51 @@
 
   </style>
 
+
+  <style id="v33-mobile-logo-left">
+
+/* v33 mobile logo left fix */
+@media screen and (max-width: 900px){
+  body .header{
+    align-items:flex-start !important;
+    justify-content:flex-start !important;
+    text-align:left !important;
+  }
+  body .logo{
+    align-self:flex-start !important;
+    margin-left:0 !important;
+    padding-left:0 !important;
+    transform:translateX(-10px) !important;
+  }
+  body .logo-stack{
+    display:block !important;
+    width:148px !important;
+    max-width:148px !important;
+    height:auto !important;
+    margin-left:0 !important;
+  }
+  body .logo-horizontal{
+    display:none !important;
+  }
+}
+@media screen and (max-width: 430px){
+  body .logo{
+    transform:translateX(-12px) !important;
+  }
+  body .logo-stack{
+    width:152px !important;
+    max-width:152px !important;
+  }
+}
+
+  </style>
+
 </head>
 <body>
 <header class="header">
   <a class="logo" href="#top" aria-label="네오스터디 홈">
     <img class="logo-horizontal" src="./assets/logo-horizontal.png?v=23" alt="네오스터디">
-    <img class="logo-stack" src="./assets/logo-stack.png?v=23" alt="네오스터디">
+    <img class="logo-stack" src="./assets/logo-stack-mobile.png?v=23" alt="네오스터디">
   </a>
   <nav>
     <a href="https://docs.google.com/forms/d/1O3MGlF-4QPyB_i3ow2tpYM8JLLoMQoD6j-0bdZ7Ga0U/viewform?edit_requested=true" target="_blank">교재구매</a>
@@ -350,31 +389,12 @@
     </a>
   </section>
 
-  <section class="section-head refined-section-head">
-    <div class="section-head-copy">
-      <p class="label">PUBLISHED BOOKS</p>
-      <h2>출간 교재</h2>
-      <p>현재 출간된 네오스터디 교재를 한눈에 확인해보세요.</p>
-    </div>
-    <div class="section-head-actions">
-      <a class="mini-btn solid" href="https://docs.google.com/forms/d/1O3MGlF-4QPyB_i3ow2tpYM8JLLoMQoD6j-0bdZ7Ga0U/viewform?edit_requested=true" target="_blank">교재 구매 바로가기</a>
-      <a class="mini-btn ghost" href="https://www.youtube.com/@%EB%84%A4%EC%98%A4%EC%8A%A4%ED%84%B0%EB%94%94" target="_blank">저자직강 무료강의</a>
-    </div>
-  </section>
-
-  <section class="books" id="books">
-    <article><span>산업안전기사</span><h3>산업안전기사</h3><p>필기 교재<br>실기 교재</p></article>
-    <article><span>산업위생관리기사</span><h3>산업위생관리기사</h3><p>필기 교재<br>실기 교재</p></article>
-    <article><span>위험물산업기사</span><h3>위험물산업기사</h3><p>필기 교재<br>실기 교재</p></article>
-    <article><span>건설안전기사</span><h3>건설안전기사</h3><p>필기 교재 <em>출간전</em><br>실기 교재</p></article>
-  </section>
-
   <section class="talks-section" id="openchat">
     <div class="section-head talk-head">
       <div class="section-head-copy">
         <p class="label">OPEN CHAT</p>
         <h2>과목별 오픈채팅방</h2>
-        <p>카카오톡 오픈채팅방에서 과목별 소통과 정보 공유를 바로 시작해보세요.</p>
+        <p>카카오톡 오픈채팅방에서 관련 자격증 시험 준비와 궁금한 점을 자유롭게 질문해보세요.</p>
       </div>
     </div>
     <div class="talk-grid">
@@ -413,7 +433,27 @@
     </div>
   </section>
 
-  <section class="cta">
+  
+
+
+  <section class="section-head refined-section-head">
+    <div class="section-head-copy">
+      <p class="label">PUBLISHED BOOKS</p>
+      <h2>출간 교재</h2>
+      <p>현재 출간된 네오스터디 교재를 한눈에 확인해보세요.</p>
+    </div>
+    <div class="section-head-actions">
+      <a class="mini-btn solid" href="https://docs.google.com/forms/d/1O3MGlF-4QPyB_i3ow2tpYM8JLLoMQoD6j-0bdZ7Ga0U/viewform?edit_requested=true" target="_blank">교재 구매 바로가기</a>
+      <a class="mini-btn ghost" href="https://www.youtube.com/@%EB%84%A4%EC%98%A4%EC%8A%A4%ED%84%B0%EB%94%94" target="_blank">저자직강 무료강의</a>
+    </div>
+  </section>
+
+  <section class="books" id="books">
+    <article><span>산업안전기사</span><h3>산업안전기사</h3><p>필기 교재<br>실기 교재</p></article>
+    <article><span>산업위생관리기사</span><h3>산업위생관리기사</h3><p>필기 교재<br>실기 교재</p></article>
+    <article><span>위험물산업기사</span><h3>위험물산업기사</h3><p>필기 교재<br>실기 교재</p></article>
+    <article><span>건설안전기사</span><h3>건설안전기사</h3><p>필기 교재 <em>출간전</em><br>실기 교재</p></article>
+  </section><section class="cta">
     <p class="cta-label">BOOK ORDER</p>
     <h2>네오스터디 교재 구매<br class="mobile-br">바로가기</h2>
     <p>네오스터디 교재를 빠르게 확인해보세요.</p>
@@ -453,7 +493,7 @@
   </div>
 </div>
 
-<script src="./script.js?v=30"></script>
+<script src="./script.js?v=33"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -496,6 +536,30 @@ document.addEventListener('DOMContentLoaded', function(){
     brandSpan.style.fontSize = window.innerWidth <= 430 ? '10.5px' : '11px';
     brandSpan.style.letterSpacing = '-0.04em';
   }
+});
+</script>
+
+
+<script id="v33-mobile-logo-left-js">
+document.addEventListener('DOMContentLoaded', function(){
+  if(!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
+  var logo = document.querySelector('.logo');
+  var stack = document.querySelector('.logo-stack');
+  var horizontal = document.querySelector('.logo-horizontal');
+  if(logo){
+    logo.style.alignSelf = 'flex-start';
+    logo.style.marginLeft = '0';
+    logo.style.paddingLeft = '0';
+    logo.style.transform = 'translateX(-10px)';
+  }
+  if(stack){
+    stack.style.display = 'block';
+    stack.style.width = window.innerWidth <= 430 ? '152px' : '148px';
+    stack.style.maxWidth = stack.style.width;
+    stack.style.height = 'auto';
+    stack.style.marginLeft = '0';
+  }
+  if(horizontal){ horizontal.style.display = 'none'; }
 });
 </script>
 

@@ -508,3 +508,48 @@ header nav a[href="https://pf.kakao.com/_Xhxdxon"],
     font-size:10.5px !important;
   }
 }
+
+
+/* v31 section order note */
+.talks-section{
+  scroll-margin-top: 96px;
+}
+.books{
+  scroll-margin-top: 96px;
+}
+
+
+
+/* v33 mobile logo left fix */
+@media screen and (max-width: 900px){
+  body .header{
+    align-items:flex-start !important;
+    justify-content:flex-start !important;
+    text-align:left !important;
+  }
+  body .logo{
+    align-self:flex-start !important;
+    margin-left:0 !important;
+    padding-left:0 !important;
+    transform:translateX(-10px) !important;
+  }
+  body .logo-stack{
+    display:block !important;
+    width:148px !important;
+    max-width:148px !important;
+    height:auto !important;
+    margin-left:0 !important;
+  }
+  body .logo-horizontal{
+    display:none !important;
+  }
+}
+@media screen and (max-width: 430px){
+  body .logo{
+    transform:translateX(-12px) !important;
+  }
+  body .logo-stack{
+    width:152px !important;
+    max-width:152px !important;
+  }
+}

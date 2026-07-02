@@ -9,7 +9,7 @@
 
   <title>저자소개 | 네오스터디</title>
   <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=23">
-  <link rel="stylesheet" href="./style.css?v=30">
+  <link rel="stylesheet" href="./style.css?v=33">
 
   <style>
     header nav a[href="https://pf.kakao.com/_Xhxdxon"],
@@ -166,12 +166,51 @@
 
   </style>
 
+
+  <style id="v33-mobile-logo-left">
+
+/* v33 mobile logo left fix */
+@media screen and (max-width: 900px){
+  body .header{
+    align-items:flex-start !important;
+    justify-content:flex-start !important;
+    text-align:left !important;
+  }
+  body .logo{
+    align-self:flex-start !important;
+    margin-left:0 !important;
+    padding-left:0 !important;
+    transform:translateX(-10px) !important;
+  }
+  body .logo-stack{
+    display:block !important;
+    width:148px !important;
+    max-width:148px !important;
+    height:auto !important;
+    margin-left:0 !important;
+  }
+  body .logo-horizontal{
+    display:none !important;
+  }
+}
+@media screen and (max-width: 430px){
+  body .logo{
+    transform:translateX(-12px) !important;
+  }
+  body .logo-stack{
+    width:152px !important;
+    max-width:152px !important;
+  }
+}
+
+  </style>
+
 </head>
 <body>
 <header class="header">
   <a class="logo" href="./index.html" aria-label="네오스터디 홈">
     <img class="logo-horizontal" src="./assets/logo-horizontal.png?v=23" alt="네오스터디">
-    <img class="logo-stack" src="./assets/logo-stack.png?v=23" alt="네오스터디">
+    <img class="logo-stack" src="./assets/logo-stack-mobile.png?v=23" alt="네오스터디">
   </a>
   <nav>
     <a href="https://docs.google.com/forms/d/1O3MGlF-4QPyB_i3ow2tpYM8JLLoMQoD6j-0bdZ7Ga0U/viewform?edit_requested=true" target="_blank">교재구매</a>
@@ -282,6 +321,30 @@ document.addEventListener('DOMContentLoaded', function(){
     brandSpan.style.fontSize = window.innerWidth <= 430 ? '10.5px' : '11px';
     brandSpan.style.letterSpacing = '-0.04em';
   }
+});
+</script>
+
+
+<script id="v33-mobile-logo-left-js">
+document.addEventListener('DOMContentLoaded', function(){
+  if(!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
+  var logo = document.querySelector('.logo');
+  var stack = document.querySelector('.logo-stack');
+  var horizontal = document.querySelector('.logo-horizontal');
+  if(logo){
+    logo.style.alignSelf = 'flex-start';
+    logo.style.marginLeft = '0';
+    logo.style.paddingLeft = '0';
+    logo.style.transform = 'translateX(-10px)';
+  }
+  if(stack){
+    stack.style.display = 'block';
+    stack.style.width = window.innerWidth <= 430 ? '152px' : '148px';
+    stack.style.maxWidth = stack.style.width;
+    stack.style.height = 'auto';
+    stack.style.marginLeft = '0';
+  }
+  if(horizontal){ horizontal.style.display = 'none'; }
 });
 </script>
 

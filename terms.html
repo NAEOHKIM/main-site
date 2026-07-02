@@ -8,7 +8,7 @@
   <meta http-equiv="Expires" content="0">
 
   <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=23">
-  <link rel="stylesheet" href="./style.css?v=30">
+  <link rel="stylesheet" href="./style.css?v=33">
   <title>이용약관 | 네오스터디</title>
 
   <style>
@@ -166,6 +166,45 @@
 
   </style>
 
+
+  <style id="v33-mobile-logo-left">
+
+/* v33 mobile logo left fix */
+@media screen and (max-width: 900px){
+  body .header{
+    align-items:flex-start !important;
+    justify-content:flex-start !important;
+    text-align:left !important;
+  }
+  body .logo{
+    align-self:flex-start !important;
+    margin-left:0 !important;
+    padding-left:0 !important;
+    transform:translateX(-10px) !important;
+  }
+  body .logo-stack{
+    display:block !important;
+    width:148px !important;
+    max-width:148px !important;
+    height:auto !important;
+    margin-left:0 !important;
+  }
+  body .logo-horizontal{
+    display:none !important;
+  }
+}
+@media screen and (max-width: 430px){
+  body .logo{
+    transform:translateX(-12px) !important;
+  }
+  body .logo-stack{
+    width:152px !important;
+    max-width:152px !important;
+  }
+}
+
+  </style>
+
 </head>
 <body>
 <main class="policy-page">
@@ -238,6 +277,30 @@ document.addEventListener('DOMContentLoaded', function(){
     brandSpan.style.fontSize = window.innerWidth <= 430 ? '10.5px' : '11px';
     brandSpan.style.letterSpacing = '-0.04em';
   }
+});
+</script>
+
+
+<script id="v33-mobile-logo-left-js">
+document.addEventListener('DOMContentLoaded', function(){
+  if(!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
+  var logo = document.querySelector('.logo');
+  var stack = document.querySelector('.logo-stack');
+  var horizontal = document.querySelector('.logo-horizontal');
+  if(logo){
+    logo.style.alignSelf = 'flex-start';
+    logo.style.marginLeft = '0';
+    logo.style.paddingLeft = '0';
+    logo.style.transform = 'translateX(-10px)';
+  }
+  if(stack){
+    stack.style.display = 'block';
+    stack.style.width = window.innerWidth <= 430 ? '152px' : '148px';
+    stack.style.maxWidth = stack.style.width;
+    stack.style.height = 'auto';
+    stack.style.marginLeft = '0';
+  }
+  if(horizontal){ horizontal.style.display = 'none'; }
 });
 </script>
 
