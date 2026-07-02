@@ -207,3 +207,26 @@ nav a:hover{border-color:#aac4ea;color:var(--blue)}
   padding:0 !important;
   text-align:right !important;
 }
+
+
+/* v23 logo transparency + popup today right */
+.logo,
+.logo img,
+.footer-logo{
+  background:transparent !important;
+  box-shadow:none !important;
+}
+.logo{
+  padding:0 !important;
+  border:0 !important;
+}
+.popup-card .today,
+#today{
+  display:block !important;
+  width:max-content !important;
+  margin:12px 0 0 auto !important;
+  padding:0 !important;
+  text-align:right !important;
+  background:transparent !important;
+  border:0 !important;
+}

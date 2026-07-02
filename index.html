@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>네오스터디 | 안전보건 자격증 교재</title>
-  <link rel="icon" type="image/png" href="./assets/logo-symbol.png">
-  <link rel="stylesheet" href="./style.css?v=22">
+  <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=23">
+  <link rel="stylesheet" href="./style.css?v=23">
 
   <style>
     /* v21 critical inline fix */
@@ -103,12 +103,36 @@
     }
   </style>
 
+
+  <style>
+    .logo,
+    .logo img,
+    .footer-logo {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+    .logo {
+      padding: 0 !important;
+      border: 0 !important;
+    }
+    .popup-card .today,
+    #today {
+      display: block !important;
+      width: max-content !important;
+      margin: 12px 0 0 auto !important;
+      padding: 0 !important;
+      text-align: right !important;
+      background: transparent !important;
+      border: 0 !important;
+    }
+  </style>
+
 </head>
 <body>
 <header class="header">
   <a class="logo" href="#top" aria-label="네오스터디 홈">
-    <img class="logo-horizontal" src="./assets/logo-horizontal.png" alt="네오스터디">
-    <img class="logo-stack" src="./assets/logo-stack.png" alt="네오스터디">
+    <img class="logo-horizontal" src="./assets/logo-horizontal.png?v=23" alt="네오스터디">
+    <img class="logo-stack" src="./assets/logo-stack.png?v=23" alt="네오스터디">
   </a>
   <nav>
     <a href="https://docs.google.com/forms/d/1O3MGlF-4QPyB_i3ow2tpYM8JLLoMQoD6j-0bdZ7Ga0U/viewform?edit_requested=true" target="_blank">교재구매</a>
@@ -240,7 +264,7 @@
 
 <footer class="footer-compact">
   <div class="footer-compact-brand">
-    <img class="footer-logo" src="./assets/logo-symbol.png" alt="" aria-hidden="true">
+    <img class="footer-logo" src="./assets/logo-symbol.png?v=23" alt="" aria-hidden="true">
     <div>
       <b>네오스터디</b>
       <span>안전보건 자격증 교재 · 무료강의 · 커뮤니티</span>
@@ -266,10 +290,10 @@
     <h2>네오스터디 교재 구매 안내</h2>
     <p>산업안전기사 · 산업위생관리기사 · 위험물산업기사 · 건설안전기사<br>필기/실기 교재를 구매 서식에서 한 번에 확인하세요.</p>
     <a class="btn primary full" href="https://docs.google.com/forms/d/1O3MGlF-4QPyB_i3ow2tpYM8JLLoMQoD6j-0bdZ7Ga0U/viewform?edit_requested=true" target="_blank">교재 구매 바로가기</a>
-    <button class="today" id="today">오늘 하루 보지 않기</button>
+    <button class="today" id="today" style="display:block;width:max-content;margin:12px 0 0 auto;padding:0;text-align:right;">오늘 하루 보지 않기</button>
   </div>
 </div>
 
-<script src="./script.js?v=22"></script>
+<script src="./script.js?v=23"></script>
 </body>
 </html>
