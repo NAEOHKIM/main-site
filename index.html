@@ -9,7 +9,7 @@
 
   <title>네오스터디 | 안전보건 자격증 교재</title>
   <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=23">
-  <link rel="stylesheet" href="./style.css?v=35">
+  <link rel="stylesheet" href="./style.css?v=39">
 
   <style>
     /* v21 critical inline fix */
@@ -287,9 +287,9 @@
 
   </style>
 
-  <style id="v35-mobile-logo-size-fix">
+  <style id="v36-mobile-logo-horizontal">
 
-/* v35 mobile logo size fix */
+/* v36 mobile logo: use horizontal logo, no crop */
 @media screen and (max-width: 900px){
   html body .header{
     position:relative !important;
@@ -298,28 +298,31 @@
     max-width:none !important;
     margin:0 !important;
     padding:18px 18px 12px 18px !important;
+    text-align:left !important;
   }
   html body .header .logo{
     display:block !important;
-    width:96px !important;
-    max-width:96px !important;
+    width:136px !important;
+    max-width:136px !important;
+    height:auto !important;
     margin:0 0 16px 0 !important;
     padding:0 !important;
     transform:none !important;
     text-align:left !important;
+    overflow:visible !important;
   }
   html body .header .logo-horizontal{
-    display:none !important;
-  }
-  html body .header .logo-stack{
     display:block !important;
-    width:96px !important;
-    max-width:96px !important;
+    width:136px !important;
+    max-width:136px !important;
     height:auto !important;
     margin:0 !important;
     padding:0 !important;
-    transform:none !important;
     object-fit:contain !important;
+    background:transparent !important;
+  }
+  html body .header .logo-stack{
+    display:none !important;
   }
   html body .header nav{
     display:flex !important;
@@ -334,19 +337,65 @@
 }
 @media screen and (max-width: 430px){
   html body .header .logo,
-  html body .header .logo-stack{
-    width:92px !important;
-    max-width:92px !important;
+  html body .header .logo-horizontal{
+    width:132px !important;
+    max-width:132px !important;
   }
 }
 
   </style>
+
+  <style id="v39-force-mobile-text">
+
+/* v39 FORCE mobile text line control */
+@media screen and (max-width: 900px){
+  body .hero-desc-mobile,
+  body .books-desc-mobile{
+    display:block !important;
+    white-space:nowrap !important;
+    font-size:13px !important;
+    line-height:1.42 !important;
+    letter-spacing:-0.055em !important;
+    word-break:keep-all !important;
+    overflow:visible !important;
+  }
+
+  body .openchat-mobile-copy{
+    display:block !important;
+    font-size:13px !important;
+    line-height:1.45 !important;
+    letter-spacing:-0.055em !important;
+    word-break:keep-all !important;
+  }
+
+  body .openchat-mobile-copy .mobile-line{
+    display:block !important;
+    white-space:nowrap !important;
+    word-break:keep-all !important;
+  }
+
+  body .mobile-only-break{
+    display:block !important;
+  }
+}
+
+@media screen and (max-width: 430px){
+  body .hero-desc-mobile,
+  body .books-desc-mobile,
+  body .openchat-mobile-copy{
+    font-size:12px !important;
+    letter-spacing:-0.07em !important;
+  }
+}
+
+  </style>
+
 </head>
 <body>
 <header class="header">
   <a class="logo" href="#top" aria-label="네오스터디 홈">
-    <img class="logo-horizontal" src="./assets/logo-horizontal.png?v=23" alt="네오스터디">
-    <img class="logo-stack" src="./assets/logo-mobile-tight.png?v=34" alt="네오스터디">
+    <img class="logo-horizontal" src="./assets/logo-horizontal.png?v=37" alt="네오스터디">
+    <img class="logo-stack" src="./assets/logo-stack.png?v=37" alt="네오스터디">
   </a>
   <nav>
     <a href="https://docs.google.com/forms/d/1O3MGlF-4QPyB_i3ow2tpYM8JLLoMQoD6j-0bdZ7Ga0U/viewform?edit_requested=true" target="_blank">교재구매</a>
@@ -367,7 +416,7 @@
         <span>위험물산업기사</span>
         <span>건설안전기사</span>
       </div>
-      <p class="desc">필기·실기 교재와 저자직강 무료강의를 쉽고 빠르게 확인하세요.</p>
+      <p class="desc hero-desc-mobile">필기·실기 교재와 저자직강 무료강의를 쉽고 빠르게 확인하세요.</p>
       <div class="actions refined-actions">
         <a class="btn primary purchase-cta-main" href="https://docs.google.com/forms/d/1O3MGlF-4QPyB_i3ow2tpYM8JLLoMQoD6j-0bdZ7Ga0U/viewform?edit_requested=true" target="_blank">교재 구매 바로가기 <span>→</span></a>
         <a class="btn hero-secondary" href="https://www.youtube.com/@%EB%84%A4%EC%98%A4%EC%8A%A4%ED%84%B0%EB%94%94" target="_blank"><span class="play-dot">▶</span> 저자직강 무료강의</a>
@@ -409,7 +458,7 @@
       <div class="section-head-copy">
         <p class="label">OPEN CHAT</p>
         <h2>과목별 오픈채팅방</h2>
-        <p>카카오톡 오픈채팅방에서 관련 자격증 시험 준비와 궁금한 점을 자유롭게 질문해보세요.</p>
+        <p class="openchat-mobile-copy"><span class="mobile-line">카카오톡 오픈채팅방에서 관련 자격증 시험 준비와</span><span class="mobile-line">궁금한 점을 자유롭게 질문해보세요.</span></p>
       </div>
     </div>
     <div class="talk-grid">
@@ -455,7 +504,7 @@
     <div class="section-head-copy">
       <p class="label">PUBLISHED BOOKS</p>
       <h2>출간 교재</h2>
-      <p>현재 출간된 네오스터디 교재를 한눈에 확인해보세요.</p>
+      <p class="mobile-one-line books-desc-mobile">현재 출간된 네오스터디 교재를 한눈에 확인해보세요.</p>
     </div>
     <div class="section-head-actions">
       <a class="mini-btn solid" href="https://docs.google.com/forms/d/1O3MGlF-4QPyB_i3ow2tpYM8JLLoMQoD6j-0bdZ7Ga0U/viewform?edit_requested=true" target="_blank">교재 구매 바로가기</a>
@@ -508,7 +557,7 @@
   </div>
 </div>
 
-<script src="./script.js?v=35"></script>
+<script src="./script.js?v=39"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -554,32 +603,75 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 
-<script id="v35-mobile-logo-size-js">
+<script id="v36-mobile-logo-horizontal-js">
 document.addEventListener('DOMContentLoaded', function(){
   if(!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
   var logo = document.querySelector('.header .logo');
-  var stack = document.querySelector('.header .logo-stack');
   var horizontal = document.querySelector('.header .logo-horizontal');
-  var size = window.innerWidth <= 430 ? '92px' : '96px';
+  var stack = document.querySelector('.header .logo-stack');
+  var size = window.innerWidth <= 430 ? '132px' : '136px';
   if(logo){
     logo.style.display = 'block';
     logo.style.width = size;
     logo.style.maxWidth = size;
+    logo.style.height = 'auto';
     logo.style.margin = '0 0 16px 0';
     logo.style.padding = '0';
     logo.style.transform = 'none';
+    logo.style.overflow = 'visible';
   }
-  if(stack){
-    stack.style.display = 'block';
-    stack.style.width = size;
-    stack.style.maxWidth = size;
-    stack.style.height = 'auto';
-    stack.style.objectFit = 'contain';
-    stack.style.margin = '0';
-    stack.style.padding = '0';
-    stack.style.transform = 'none';
+  if(horizontal){
+    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=37');
+    horizontal.style.display = 'block';
+    horizontal.style.width = size;
+    horizontal.style.maxWidth = size;
+    horizontal.style.height = 'auto';
+    horizontal.style.objectFit = 'contain';
+    horizontal.style.background = 'transparent';
   }
-  if(horizontal){ horizontal.style.display = 'none'; }
+  if(stack){ stack.style.display = 'none'; }
+});
+</script>
+
+<script id="v39-force-mobile-text-js">
+document.addEventListener('DOMContentLoaded', function(){
+  if(!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
+
+  var heroDesc = document.querySelector('.hero-copy .desc');
+  if(heroDesc){
+    heroDesc.classList.add('hero-desc-mobile');
+    heroDesc.textContent = '필기·실기 교재와 저자직강 무료강의를 쉽고 빠르게 확인하세요.';
+    heroDesc.style.whiteSpace = 'nowrap';
+    heroDesc.style.fontSize = window.innerWidth <= 430 ? '12px' : '13px';
+    heroDesc.style.letterSpacing = window.innerWidth <= 430 ? '-0.07em' : '-0.055em';
+    heroDesc.style.lineHeight = '1.42';
+    heroDesc.style.wordBreak = 'keep-all';
+  }
+
+  var openChat = document.querySelector('.talk-head .section-head-copy p:not(.label), .talk-head p:not(.label)');
+  if(openChat){
+    openChat.classList.add('openchat-mobile-copy');
+    openChat.innerHTML = '<span class="mobile-line">카카오톡 오픈채팅방에서 관련 자격증 시험 준비와</span><span class="mobile-line">궁금한 점을 자유롭게 질문해보세요.</span>';
+    openChat.style.fontSize = window.innerWidth <= 430 ? '12px' : '13px';
+    openChat.style.letterSpacing = window.innerWidth <= 430 ? '-0.07em' : '-0.055em';
+    openChat.style.lineHeight = '1.45';
+  }
+
+  var headings = Array.from(document.querySelectorAll('.refined-section-head .section-head-copy h2'));
+  headings.forEach(function(h2){
+    if((h2.textContent || '').trim() === '출간 교재'){
+      var p = h2.parentElement ? h2.parentElement.querySelector('p:not(.label)') : null;
+      if(p){
+        p.classList.add('books-desc-mobile');
+        p.textContent = '현재 출간된 네오스터디 교재를 한눈에 확인해보세요.';
+        p.style.whiteSpace = 'nowrap';
+        p.style.fontSize = window.innerWidth <= 430 ? '12px' : '13px';
+        p.style.letterSpacing = window.innerWidth <= 430 ? '-0.07em' : '-0.055em';
+        p.style.lineHeight = '1.42';
+        p.style.wordBreak = 'keep-all';
+      }
+    }
+  });
 });
 </script>
 
