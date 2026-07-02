@@ -8,8 +8,8 @@
   <meta http-equiv="Expires" content="0">
 
   <title>네오스터디 | 안전보건 자격증 교재</title>
-  <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=42">
-  <link rel="stylesheet" href="./style.css?v=42">
+  <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=43">
+  <link rel="stylesheet" href="./style.css?v=43">
 
   <style>
     /* v21 critical inline fix */
@@ -516,12 +516,32 @@
 }
   </style>
 
+
+
+  <style id="v43-desktop-hero-title-break">
+/* v43 FORCE desktop + mobile hero title line break */
+html body .hero-copy h1 .hero-title-line{
+  display:block !important;
+  white-space:nowrap !important;
+  word-break:keep-all !important;
+}
+html body .hero-copy h1{
+  word-break:keep-all !important;
+  overflow-wrap:normal !important;
+}
+@media screen and (min-width: 901px){
+  html body .hero-copy h1{
+    letter-spacing:-0.055em !important;
+  }
+}
+  </style>
+
 </head>
 <body>
 <header class="header">
   <a class="logo" href="#top" aria-label="네오스터디 홈">
-    <img class="logo-horizontal" src="./assets/logo-horizontal.png?v=42" alt="네오스터디">
-    <img class="logo-stack" src="./assets/logo-stack.png?v=42" alt="네오스터디">
+    <img class="logo-horizontal" src="./assets/logo-horizontal.png?v=43" alt="네오스터디">
+    <img class="logo-stack" src="./assets/logo-stack.png?v=43" alt="네오스터디">
   </a>
   <nav>
     <a href="https://docs.google.com/forms/d/1O3MGlF-4QPyB_i3ow2tpYM8JLLoMQoD6j-0bdZ7Ga0U/viewform?edit_requested=true" target="_blank">교재구매</a>
@@ -653,7 +673,7 @@
 
 <footer class="footer-compact">
   <div class="footer-compact-brand">
-    <img class="footer-logo" src="./assets/logo-symbol.png?v=42" alt="" aria-hidden="true">
+    <img class="footer-logo" src="./assets/logo-symbol.png?v=43" alt="" aria-hidden="true">
     <div>
       <b>네오스터디</b>
       <span>안전보건 자격증 교재 · 무료강의 · 커뮤니티</span>
@@ -683,7 +703,7 @@
   </div>
 </div>
 
-<script src="./script.js?v=42"></script>
+<script src="./script.js?v=43"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -747,7 +767,7 @@ document.addEventListener('DOMContentLoaded', function(){
     logo.style.overflow = 'visible';
   }
   if(horizontal){
-    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=42');
+    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=43');
     horizontal.style.display = 'block';
     horizontal.style.width = size;
     horizontal.style.maxWidth = size;
@@ -822,7 +842,7 @@ document.addEventListener('DOMContentLoaded', function(){
     logo.style.overflow = 'visible';
   }
   if(horizontal){
-    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=42');
+    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=43');
     horizontal.style.display = 'block';
     horizontal.style.width = mobileW;
     horizontal.style.maxWidth = mobileW;
@@ -926,6 +946,24 @@ document.addEventListener('DOMContentLoaded', function(){
     h1.style.wordBreak = 'keep-all';
     h1.style.overflowWrap = 'normal';
   }
+});
+</script>
+
+
+
+<script id="v43-desktop-hero-title-break-js">
+document.addEventListener('DOMContentLoaded', function(){
+  var h1 = document.querySelector('.hero-copy h1');
+  if(h1){
+    h1.innerHTML = '<span class="hero-title-line">안전보건 자격증 교재,</span><span class="hero-title-line">네오스터디에서 한 번에</span>';
+    h1.style.wordBreak = 'keep-all';
+    h1.style.overflowWrap = 'normal';
+  }
+  document.querySelectorAll('.hero-title-line').forEach(function(line){
+    line.style.display = 'block';
+    line.style.whiteSpace = 'nowrap';
+    line.style.wordBreak = 'keep-all';
+  });
 });
 </script>
 
