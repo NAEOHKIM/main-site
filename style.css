@@ -197,3 +197,13 @@ nav a:hover{border-color:#aac4ea;color:var(--blue)}
   .talk-card{padding:18px !important;}
   .talk-copy h3{font-size:19px !important;}
 }
+
+
+/* v22 popup '오늘 하루 보지 않기' right alignment */
+.popup-card .today{
+  display:block !important;
+  width:auto !important;
+  margin:12px 0 0 auto !important;
+  padding:0 !important;
+  text-align:right !important;
+}
