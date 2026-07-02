@@ -8,7 +8,7 @@
   <meta http-equiv="Expires" content="0">
 
   <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=23">
-  <link rel="stylesheet" href="./style.css?v=33">
+  <link rel="stylesheet" href="./style.css?v=35">
   <title>개인정보처리방침 | 네오스터디</title>
 
   <style>
@@ -166,45 +166,60 @@
 
   </style>
 
+  <style id="v35-mobile-logo-size-fix">
 
-  <style id="v33-mobile-logo-left">
-
-/* v33 mobile logo left fix */
+/* v35 mobile logo size fix */
 @media screen and (max-width: 900px){
-  body .header{
-    align-items:flex-start !important;
-    justify-content:flex-start !important;
+  html body .header{
+    position:relative !important;
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:18px 18px 12px 18px !important;
+  }
+  html body .header .logo{
+    display:block !important;
+    width:96px !important;
+    max-width:96px !important;
+    margin:0 0 16px 0 !important;
+    padding:0 !important;
+    transform:none !important;
     text-align:left !important;
   }
-  body .logo{
-    align-self:flex-start !important;
-    margin-left:0 !important;
-    padding-left:0 !important;
-    transform:translateX(-10px) !important;
-  }
-  body .logo-stack{
-    display:block !important;
-    width:148px !important;
-    max-width:148px !important;
-    height:auto !important;
-    margin-left:0 !important;
-  }
-  body .logo-horizontal{
+  html body .header .logo-horizontal{
     display:none !important;
+  }
+  html body .header .logo-stack{
+    display:block !important;
+    width:96px !important;
+    max-width:96px !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:0 !important;
+    transform:none !important;
+    object-fit:contain !important;
+  }
+  html body .header nav{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:flex-start !important;
+    align-items:center !important;
+    gap:10px !important;
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
   }
 }
 @media screen and (max-width: 430px){
-  body .logo{
-    transform:translateX(-12px) !important;
-  }
-  body .logo-stack{
-    width:152px !important;
-    max-width:152px !important;
+  html body .header .logo,
+  html body .header .logo-stack{
+    width:92px !important;
+    max-width:92px !important;
   }
 }
 
   </style>
-
 </head>
 <body>
 <main class="policy-page">
@@ -280,25 +295,30 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 
-
-<script id="v33-mobile-logo-left-js">
+<script id="v35-mobile-logo-size-js">
 document.addEventListener('DOMContentLoaded', function(){
   if(!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
-  var logo = document.querySelector('.logo');
-  var stack = document.querySelector('.logo-stack');
-  var horizontal = document.querySelector('.logo-horizontal');
+  var logo = document.querySelector('.header .logo');
+  var stack = document.querySelector('.header .logo-stack');
+  var horizontal = document.querySelector('.header .logo-horizontal');
+  var size = window.innerWidth <= 430 ? '92px' : '96px';
   if(logo){
-    logo.style.alignSelf = 'flex-start';
-    logo.style.marginLeft = '0';
-    logo.style.paddingLeft = '0';
-    logo.style.transform = 'translateX(-10px)';
+    logo.style.display = 'block';
+    logo.style.width = size;
+    logo.style.maxWidth = size;
+    logo.style.margin = '0 0 16px 0';
+    logo.style.padding = '0';
+    logo.style.transform = 'none';
   }
   if(stack){
     stack.style.display = 'block';
-    stack.style.width = window.innerWidth <= 430 ? '152px' : '148px';
-    stack.style.maxWidth = stack.style.width;
+    stack.style.width = size;
+    stack.style.maxWidth = size;
     stack.style.height = 'auto';
-    stack.style.marginLeft = '0';
+    stack.style.objectFit = 'contain';
+    stack.style.margin = '0';
+    stack.style.padding = '0';
+    stack.style.transform = 'none';
   }
   if(horizontal){ horizontal.style.display = 'none'; }
 });
