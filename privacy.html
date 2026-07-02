@@ -3,14 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=23">
-  <link rel="stylesheet" href="./style.css?v=25">
+  <link rel="stylesheet" href="./style.css?v=28">
   <title>개인정보처리방침 | 네오스터디</title>
 
   <style>
     header nav a[href="https://pf.kakao.com/_Xhxdxon"],
     .header nav a[href="https://pf.kakao.com/_Xhxdxon"]{
       display:none !important;
+    }
+  </style>
+
+
+  <style id="v28-mobile-force">
+    @media(max-width:900px){
+      .logo-stack{width:170px !important;height:auto !important;}
+      .logo-horizontal{display:none !important;}
+      .header{align-items:flex-start !important;}
+      header nav a[href="https://pf.kakao.com/_Xhxdxon"],
+      .header nav a[href="https://pf.kakao.com/_Xhxdxon"]{display:none !important;}
+      nav a{font-size:15px !important;font-weight:900 !important;padding:10px 14px !important;}
+      .books article{min-height:auto !important;padding:20px 22px !important;border-radius:22px !important;}
+      .books article h3{font-size:24px !important;margin:16px 0 12px !important;}
+      .books article p{font-size:17px !important;line-height:1.55 !important;}
+      .cta{padding:28px 20px !important;margin:34px auto 28px !important;border-radius:24px !important;}
+      .cta h2{font-size:32px !important;line-height:1.16 !important;}
+      .mobile-br{display:block !important;}
+      .cta p:not(.cta-label){font-size:15px !important;margin-bottom:16px !important;}
+      .cta-main-btn{min-height:50px !important;font-size:17px !important;}
     }
   </style>
 
@@ -44,5 +68,28 @@
     주소: 전남광주통합특별시 동구 백서로125번길 34-2 5층 5048호</p>
   </section>
 </main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('header nav a, .header nav a').forEach(function (a) {
+      var text = (a.textContent || '').replace(/\s/g, '');
+      if (text === '1:1문의' || a.getAttribute('href') === 'https://pf.kakao.com/_Xhxdxon') {
+        a.remove();
+      }
+    });
+  });
+</script>
+
+
+<script id="v28-remove-contact-nav">
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('header nav a, .header nav a').forEach(function(a){
+    if ((a.textContent || '').replace(/\s/g,'') === '1:1문의' || a.href === 'https://pf.kakao.com/_Xhxdxon') {
+      a.remove();
+    }
+  });
+});
+</script>
+
 </body>
 </html>
