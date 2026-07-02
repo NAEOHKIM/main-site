@@ -8,8 +8,8 @@
   <meta http-equiv="Expires" content="0">
 
   <title>네오스터디 | 안전보건 자격증 교재</title>
-  <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=41">
-  <link rel="stylesheet" href="./style.css?v=41">
+  <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=42">
+  <link rel="stylesheet" href="./style.css?v=42">
 
   <style>
     /* v21 critical inline fix */
@@ -483,12 +483,45 @@
 }
   </style>
 
+
+
+  <style id="v42-mobile-hero-title-fit">
+/* v42 FORCE mobile hero title: fit all small phones */
+@media screen and (max-width: 900px){
+  html body .hero-copy h1{
+    font-size:clamp(34px, 8.45vw, 46px) !important;
+    line-height:1.08 !important;
+    letter-spacing:-0.075em !important;
+    word-break:keep-all !important;
+    overflow-wrap:normal !important;
+  }
+  html body .hero-copy h1 .hero-title-line{
+    display:block !important;
+    white-space:nowrap !important;
+    word-break:keep-all !important;
+  }
+}
+@media screen and (max-width: 390px){
+  html body .hero-copy h1{
+    font-size:32px !important;
+    line-height:1.08 !important;
+    letter-spacing:-0.09em !important;
+  }
+}
+@media screen and (max-width: 360px){
+  html body .hero-copy h1{
+    font-size:30px !important;
+    letter-spacing:-0.105em !important;
+  }
+}
+  </style>
+
 </head>
 <body>
 <header class="header">
   <a class="logo" href="#top" aria-label="네오스터디 홈">
-    <img class="logo-horizontal" src="./assets/logo-horizontal.png?v=41" alt="네오스터디">
-    <img class="logo-stack" src="./assets/logo-stack.png?v=41" alt="네오스터디">
+    <img class="logo-horizontal" src="./assets/logo-horizontal.png?v=42" alt="네오스터디">
+    <img class="logo-stack" src="./assets/logo-stack.png?v=42" alt="네오스터디">
   </a>
   <nav>
     <a href="https://docs.google.com/forms/d/1O3MGlF-4QPyB_i3ow2tpYM8JLLoMQoD6j-0bdZ7Ga0U/viewform?edit_requested=true" target="_blank">교재구매</a>
@@ -502,7 +535,7 @@
   <section class="hero">
     <div class="hero-copy refined">
       <p class="label">안전보건 자격증 교재 전문</p>
-      <h1>안전보건 자격증 교재,<br>네오스터디에서 한 번에</h1>
+      <h1><span class="hero-title-line">안전보건 자격증 교재,</span><span class="hero-title-line">네오스터디에서 한 번에</span></h1>
       <div class="hero-tags">
         <span>산업안전기사</span>
         <span>산업위생관리기사</span>
@@ -620,7 +653,7 @@
 
 <footer class="footer-compact">
   <div class="footer-compact-brand">
-    <img class="footer-logo" src="./assets/logo-symbol.png?v=41" alt="" aria-hidden="true">
+    <img class="footer-logo" src="./assets/logo-symbol.png?v=42" alt="" aria-hidden="true">
     <div>
       <b>네오스터디</b>
       <span>안전보건 자격증 교재 · 무료강의 · 커뮤니티</span>
@@ -650,7 +683,7 @@
   </div>
 </div>
 
-<script src="./script.js?v=41"></script>
+<script src="./script.js?v=42"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -714,7 +747,7 @@ document.addEventListener('DOMContentLoaded', function(){
     logo.style.overflow = 'visible';
   }
   if(horizontal){
-    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=41');
+    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=42');
     horizontal.style.display = 'block';
     horizontal.style.width = size;
     horizontal.style.maxWidth = size;
@@ -789,7 +822,7 @@ document.addEventListener('DOMContentLoaded', function(){
     logo.style.overflow = 'visible';
   }
   if(horizontal){
-    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=41');
+    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=42');
     horizontal.style.display = 'block';
     horizontal.style.width = mobileW;
     horizontal.style.maxWidth = mobileW;
@@ -874,6 +907,24 @@ document.addEventListener('DOMContentLoaded', function(){
     play.style.justifySelf = 'end';
     play.style.margin = '0';
     play.style.order = 'initial';
+  }
+});
+</script>
+
+
+
+<script id="v42-mobile-hero-title-fit-js">
+document.addEventListener('DOMContentLoaded', function(){
+  if(!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
+
+  var h1 = document.querySelector('.hero-copy h1');
+  if(h1){
+    h1.innerHTML = '<span class="hero-title-line">안전보건 자격증 교재,</span><span class="hero-title-line">네오스터디에서 한 번에</span>';
+    h1.style.fontSize = window.innerWidth <= 360 ? '30px' : (window.innerWidth <= 390 ? '32px' : 'clamp(34px, 8.45vw, 46px)');
+    h1.style.lineHeight = '1.08';
+    h1.style.letterSpacing = window.innerWidth <= 360 ? '-0.105em' : (window.innerWidth <= 390 ? '-0.09em' : '-0.075em');
+    h1.style.wordBreak = 'keep-all';
+    h1.style.overflowWrap = 'normal';
   }
 });
 </script>

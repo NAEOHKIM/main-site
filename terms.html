@@ -7,8 +7,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
-  <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=41">
-  <link rel="stylesheet" href="./style.css?v=41">
+  <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=42">
+  <link rel="stylesheet" href="./style.css?v=42">
   <title>이용약관 | 네오스터디</title>
 
   <style>
@@ -362,6 +362,39 @@
 }
   </style>
 
+
+
+  <style id="v42-mobile-hero-title-fit">
+/* v42 FORCE mobile hero title: fit all small phones */
+@media screen and (max-width: 900px){
+  html body .hero-copy h1{
+    font-size:clamp(34px, 8.45vw, 46px) !important;
+    line-height:1.08 !important;
+    letter-spacing:-0.075em !important;
+    word-break:keep-all !important;
+    overflow-wrap:normal !important;
+  }
+  html body .hero-copy h1 .hero-title-line{
+    display:block !important;
+    white-space:nowrap !important;
+    word-break:keep-all !important;
+  }
+}
+@media screen and (max-width: 390px){
+  html body .hero-copy h1{
+    font-size:32px !important;
+    line-height:1.08 !important;
+    letter-spacing:-0.09em !important;
+  }
+}
+@media screen and (max-width: 360px){
+  html body .hero-copy h1{
+    font-size:30px !important;
+    letter-spacing:-0.105em !important;
+  }
+}
+  </style>
+
 </head>
 <body>
 <main class="policy-page">
@@ -455,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function(){
     logo.style.overflow = 'visible';
   }
   if(horizontal){
-    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=41');
+    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=42');
     horizontal.style.display = 'block';
     horizontal.style.width = size;
     horizontal.style.maxWidth = size;
@@ -530,7 +563,7 @@ document.addEventListener('DOMContentLoaded', function(){
     logo.style.overflow = 'visible';
   }
   if(horizontal){
-    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=41');
+    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=42');
     horizontal.style.display = 'block';
     horizontal.style.width = mobileW;
     horizontal.style.maxWidth = mobileW;
@@ -615,6 +648,24 @@ document.addEventListener('DOMContentLoaded', function(){
     play.style.justifySelf = 'end';
     play.style.margin = '0';
     play.style.order = 'initial';
+  }
+});
+</script>
+
+
+
+<script id="v42-mobile-hero-title-fit-js">
+document.addEventListener('DOMContentLoaded', function(){
+  if(!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
+
+  var h1 = document.querySelector('.hero-copy h1');
+  if(h1){
+    h1.innerHTML = '<span class="hero-title-line">안전보건 자격증 교재,</span><span class="hero-title-line">네오스터디에서 한 번에</span>';
+    h1.style.fontSize = window.innerWidth <= 360 ? '30px' : (window.innerWidth <= 390 ? '32px' : 'clamp(34px, 8.45vw, 46px)');
+    h1.style.lineHeight = '1.08';
+    h1.style.letterSpacing = window.innerWidth <= 360 ? '-0.105em' : (window.innerWidth <= 390 ? '-0.09em' : '-0.075em');
+    h1.style.wordBreak = 'keep-all';
+    h1.style.overflowWrap = 'normal';
   }
 });
 </script>
