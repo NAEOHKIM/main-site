@@ -7,8 +7,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
 
-  <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=40">
-  <link rel="stylesheet" href="./style.css?v=40">
+  <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=41">
+  <link rel="stylesheet" href="./style.css?v=41">
   <title>이용약관 | 네오스터디</title>
 
   <style>
@@ -316,6 +316,52 @@
 }
   </style>
 
+
+
+  <style id="v41-mobile-button-icon-align">
+/* v41 FORCE mobile hero button icon alignment */
+@media screen and (max-width: 900px){
+  html body .actions.refined-actions{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:12px !important;
+    width:100% !important;
+  }
+
+  html body .actions.refined-actions .btn,
+  html body .actions.refined-actions .purchase-cta-main,
+  html body .actions.refined-actions .hero-secondary{
+    width:100% !important;
+    max-width:100% !important;
+    min-height:54px !important;
+    box-sizing:border-box !important;
+    display:grid !important;
+    grid-template-columns:1fr auto !important;
+    align-items:center !important;
+    justify-items:start !important;
+    column-gap:10px !important;
+    padding:0 20px !important;
+    text-align:left !important;
+    line-height:1 !important;
+  }
+
+  html body .actions.refined-actions .btn > span,
+  html body .actions.refined-actions .purchase-cta-main > span,
+  html body .actions.refined-actions .hero-secondary > span{
+    justify-self:end !important;
+    margin:0 !important;
+    order:initial !important;
+  }
+
+  html body .actions.refined-actions .hero-secondary .play-dot{
+    justify-self:end !important;
+    margin:0 !important;
+    order:initial !important;
+  }
+}
+  </style>
+
 </head>
 <body>
 <main class="policy-page">
@@ -409,7 +455,7 @@ document.addEventListener('DOMContentLoaded', function(){
     logo.style.overflow = 'visible';
   }
   if(horizontal){
-    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=40');
+    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=41');
     horizontal.style.display = 'block';
     horizontal.style.width = size;
     horizontal.style.maxWidth = size;
@@ -484,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function(){
     logo.style.overflow = 'visible';
   }
   if(horizontal){
-    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=40');
+    horizontal.setAttribute('src','./assets/logo-horizontal.png?v=41');
     horizontal.style.display = 'block';
     horizontal.style.width = mobileW;
     horizontal.style.maxWidth = mobileW;
@@ -520,6 +566,55 @@ document.addEventListener('DOMContentLoaded', function(){
       return n.nodeType === 3 && n.textContent.trim();
     });
     textNodes.forEach(function(n){ n.textContent = '저자직강 무료강의 '; });
+  }
+});
+</script>
+
+
+
+<script id="v41-mobile-button-icon-align-js">
+document.addEventListener('DOMContentLoaded', function(){
+  if(!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
+
+  var actions = document.querySelector('.actions.refined-actions');
+  if(actions){
+    actions.style.display = 'flex';
+    actions.style.flexDirection = 'column';
+    actions.style.alignItems = 'stretch';
+    actions.style.gap = '12px';
+    actions.style.width = '100%';
+  }
+
+  document.querySelectorAll('.actions.refined-actions .btn').forEach(function(btn){
+    btn.style.width = '100%';
+    btn.style.maxWidth = '100%';
+    btn.style.minHeight = '54px';
+    btn.style.boxSizing = 'border-box';
+    btn.style.display = 'grid';
+    btn.style.gridTemplateColumns = '1fr auto';
+    btn.style.alignItems = 'center';
+    btn.style.justifyItems = 'start';
+    btn.style.columnGap = '10px';
+    btn.style.paddingLeft = '20px';
+    btn.style.paddingRight = '20px';
+    btn.style.textAlign = 'left';
+    btn.style.lineHeight = '1';
+  });
+
+  var purchase = document.querySelector('.purchase-cta-main');
+  var purchaseIcon = purchase ? purchase.querySelector('span') : null;
+  if(purchaseIcon){
+    purchaseIcon.style.justifySelf = 'end';
+    purchaseIcon.style.margin = '0';
+  }
+
+  var secondary = document.querySelector('.hero-secondary');
+  var play = secondary ? secondary.querySelector('.play-dot') : null;
+  if(secondary && play){
+    secondary.appendChild(play);
+    play.style.justifySelf = 'end';
+    play.style.margin = '0';
+    play.style.order = 'initial';
   }
 });
 </script>
