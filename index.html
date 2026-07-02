@@ -9,7 +9,7 @@
 
   <title>네오스터디 | 안전보건 자격증 교재</title>
   <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=23">
-  <link rel="stylesheet" href="./style.css?v=28">
+  <link rel="stylesheet" href="./style.css?v=30">
 
   <style>
     /* v21 critical inline fix */
@@ -139,24 +139,152 @@
     }
   </style>
 
-
-  <style id="v28-mobile-force">
-    @media(max-width:900px){
-      .logo-stack{width:170px !important;height:auto !important;}
-      .logo-horizontal{display:none !important;}
-      .header{align-items:flex-start !important;}
-      header nav a[href="https://pf.kakao.com/_Xhxdxon"],
-      .header nav a[href="https://pf.kakao.com/_Xhxdxon"]{display:none !important;}
-      nav a{font-size:15px !important;font-weight:900 !important;padding:10px 14px !important;}
-      .books article{min-height:auto !important;padding:20px 22px !important;border-radius:22px !important;}
-      .books article h3{font-size:24px !important;margin:16px 0 12px !important;}
-      .books article p{font-size:17px !important;line-height:1.55 !important;}
-      .cta{padding:28px 20px !important;margin:34px auto 28px !important;border-radius:24px !important;}
-      .cta h2{font-size:32px !important;line-height:1.16 !important;}
-      .mobile-br{display:block !important;}
-      .cta p:not(.cta-label){font-size:15px !important;margin-bottom:16px !important;}
-      .cta-main-btn{min-height:50px !important;font-size:17px !important;}
+  <style id="v29-mobile-direct">
+    .mobile-br{display:none;}
+    @media screen and (max-width: 900px){
+      body .header{
+        align-items:flex-start !important;
+        gap:12px !important;
+        padding-top:18px !important;
+      }
+      body .logo-horizontal{
+        display:none !important;
+      }
+      body .logo-stack{
+        display:block !important;
+        width:168px !important;
+        max-width:168px !important;
+        height:auto !important;
+      }
+      body header nav a[href="https://pf.kakao.com/_Xhxdxon"],
+      body .header nav a[href="https://pf.kakao.com/_Xhxdxon"]{
+        display:none !important;
+        visibility:hidden !important;
+        width:0 !important;
+        height:0 !important;
+        overflow:hidden !important;
+        padding:0 !important;
+        margin:0 !important;
+        border:0 !important;
+      }
+      body nav{
+        display:flex !important;
+        flex-wrap:wrap !important;
+        gap:10px !important;
+      }
+      body nav a{
+        font-size:15px !important;
+        font-weight:900 !important;
+        padding:10px 14px !important;
+        letter-spacing:-.02em !important;
+      }
+      body .books article{
+        min-height:0 !important;
+        padding:20px 22px !important;
+        border-radius:22px !important;
+      }
+      body .books article h3{
+        margin:14px 0 10px !important;
+        font-size:24px !important;
+        line-height:1.2 !important;
+      }
+      body .books article p{
+        font-size:17px !important;
+        line-height:1.45 !important;
+      }
+      body .cta{
+        padding:26px 18px !important;
+        margin:34px auto 28px !important;
+        border-radius:24px !important;
+      }
+      body .cta h2{
+        font-size:32px !important;
+        line-height:1.15 !important;
+      }
+      body .mobile-br{
+        display:block !important;
+      }
+      body .cta p:not(.cta-label){
+        font-size:15px !important;
+        line-height:1.5 !important;
+        margin-bottom:16px !important;
+      }
+      body .cta-main-btn{
+        min-height:50px !important;
+        font-size:17px !important;
+      }
     }
+  </style>
+
+
+  <style id="v30-mobile-footer-oneline">
+
+/* v30 mobile footer one-line fix */
+@media screen and (max-width: 900px){
+  body .footer-compact{
+    padding:20px 18px 26px !important;
+    border-radius:24px !important;
+  }
+  body .footer-compact-brand{
+    gap:10px !important;
+    align-items:center !important;
+  }
+  body .footer-logo{
+    width:46px !important;
+    flex:0 0 46px !important;
+  }
+  body .footer-compact-brand b{
+    font-size:17px !important;
+    line-height:1.2 !important;
+  }
+  body .footer-compact-brand span{
+    display:block !important;
+    white-space:nowrap !important;
+    font-size:11px !important;
+    line-height:1.35 !important;
+    letter-spacing:-.04em !important;
+  }
+  body .footer-compact-info{
+    font-size:12px !important;
+    line-height:1.55 !important;
+    letter-spacing:-.055em !important;
+  }
+  body .footer-compact-info p{
+    margin:0 0 7px !important;
+  }
+  body .footer-compact-info p:nth-child(1),
+  body .footer-compact-info p:nth-child(2){
+    white-space:nowrap !important;
+    font-size:12px !important;
+    letter-spacing:-.075em !important;
+  }
+  body .footer-compact-info .divider{
+    margin:0 4px !important;
+  }
+  body .policy-links{
+    font-size:14px !important;
+    letter-spacing:-.04em !important;
+  }
+  body .copyright{
+    white-space:nowrap !important;
+    font-size:12px !important;
+    letter-spacing:-.04em !important;
+  }
+}
+@media screen and (max-width: 430px){
+  body .footer-compact-info{
+    font-size:11px !important;
+  }
+  body .footer-compact-info p:nth-child(1),
+  body .footer-compact-info p:nth-child(2){
+    font-size:11px !important;
+    letter-spacing:-.09em !important;
+  }
+  body .footer-compact-brand span{
+    font-size:10.5px !important;
+  }
+}
+
   </style>
 
 </head>
@@ -325,7 +453,7 @@
   </div>
 </div>
 
-<script src="./script.js?v=28"></script>
+<script src="./script.js?v=30"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -338,14 +466,36 @@
   });
 </script>
 
-
-<script id="v28-remove-contact-nav">
+<script id="v29-remove-contact-nav">
 document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('header nav a, .header nav a').forEach(function(a){
-    if ((a.textContent || '').replace(/\s/g,'') === '1:1문의' || a.href === 'https://pf.kakao.com/_Xhxdxon') {
-      a.remove();
+  document.querySelectorAll('header nav a, .header nav a, nav a').forEach(function(a){
+    var txt = (a.textContent || '').replace(/\s/g,'');
+    var href = a.getAttribute('href') || '';
+    if (txt === '1:1문의' || href === 'https://pf.kakao.com/_Xhxdxon') {
+      a.parentNode && a.parentNode.removeChild(a);
     }
   });
+});
+</script>
+
+
+<script id="v30-footer-inline-js">
+document.addEventListener('DOMContentLoaded', function(){
+  var isMobile = window.matchMedia && window.matchMedia('(max-width: 900px)').matches;
+  if(!isMobile) return;
+  document.querySelectorAll('.footer-compact-info p').forEach(function(p, idx){
+    if(idx === 0 || idx === 1){
+      p.style.whiteSpace = 'nowrap';
+      p.style.fontSize = window.innerWidth <= 430 ? '11px' : '12px';
+      p.style.letterSpacing = window.innerWidth <= 430 ? '-0.09em' : '-0.075em';
+    }
+  });
+  var brandSpan = document.querySelector('.footer-compact-brand span');
+  if(brandSpan){
+    brandSpan.style.whiteSpace = 'nowrap';
+    brandSpan.style.fontSize = window.innerWidth <= 430 ? '10.5px' : '11px';
+    brandSpan.style.letterSpacing = '-0.04em';
+  }
 });
 </script>
 
