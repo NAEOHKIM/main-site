@@ -102,3 +102,98 @@ nav a:hover{border-color:#aac4ea;color:var(--blue)}
   .hero-copy{padding:28px}.desc,.section-head-copy p:not(.label),.talk-head p:not(.label),.author-desc,.policy-page > p{font-size:16px}.refined-quick,.books,.cert-grid{grid-template-columns:1fr}
   .quick-card{min-height:150px}.books article{min-height:unset}.cover-stack{height:280px}.talk-card{padding:18px}.talk-copy h3{font-size:19px}.footer-compact{padding:20px}.policy-page{padding:22px}
 }
+
+
+/* v20 force fix: openchat card rendering */
+.talks-section{
+  padding:34px !important;
+  margin-bottom:18px !important;
+  border-radius:32px !important;
+  background:rgba(255,255,255,.62) !important;
+  border:1px solid var(--line) !important;
+  box-shadow:var(--shadow) !important;
+}
+.talk-grid{
+  display:grid !important;
+  grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+  gap:16px !important;
+}
+.talk-card{
+  display:flex !important;
+  align-items:center !important;
+  gap:16px !important;
+  padding:22px !important;
+  border-radius:24px !important;
+  background:#fff !important;
+  border:1px solid var(--line) !important;
+  box-shadow:var(--shadow) !important;
+}
+.talk-icon{
+  flex:0 0 58px !important;
+  width:58px !important;
+  height:58px !important;
+  border-radius:18px !important;
+  display:grid !important;
+  place-items:center !important;
+  background:linear-gradient(180deg,#f5f9ff 0%, #e7f0ff 100%) !important;
+  border:1px solid #cddcf5 !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9) !important;
+}
+.talk-glyph{
+  display:inline-grid !important;
+  place-items:center !important;
+  width:34px !important;
+  height:26px !important;
+  border-radius:14px !important;
+  background:linear-gradient(135deg,#4f7fe6,#2e67dc) !important;
+  color:#fff !important;
+  font-size:0 !important;
+  font-weight:900 !important;
+  position:relative !important;
+  line-height:1 !important;
+}
+.talk-glyph::before{
+  content:"•••" !important;
+  font-size:14px !important;
+  letter-spacing:1px !important;
+  transform:translateY(-1px) !important;
+}
+.talk-glyph::after{
+  content:"" !important;
+  position:absolute !important;
+  left:7px !important;
+  bottom:-5px !important;
+  border:6px solid transparent !important;
+  border-top-color:#3f74e2 !important;
+  border-right:0 !important;
+  transform:rotate(24deg) !important;
+}
+.talk-copy h3{
+  margin:0 0 7px !important;
+  font-size:22px !important;
+  letter-spacing:-.03em !important;
+}
+.talk-copy p{
+  margin:0 0 4px !important;
+  font-size:15px !important;
+  font-weight:800 !important;
+  color:#2f5fb6 !important;
+}
+.talk-copy .talk-hint{
+  font-size:14px !important;
+  color:var(--muted) !important;
+  word-break:keep-all !important;
+}
+@media(max-width:1100px){
+  .talk-grid{grid-template-columns:1fr !important;}
+}
+@media(max-width:760px){
+  nav a{
+    font-size:14px !important;
+    padding:10px 13px !important;
+    font-weight:850 !important;
+    letter-spacing:-.01em !important;
+  }
+  .talk-card{padding:18px !important;}
+  .talk-copy h3{font-size:19px !important;}
+}
