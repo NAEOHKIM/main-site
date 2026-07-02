@@ -3,9 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <title>저자소개 | 네오스터디</title>
   <link rel="icon" type="image/png" href="./assets/logo-symbol.png?v=23">
-  <link rel="stylesheet" href="./style.css?v=25">
+  <link rel="stylesheet" href="./style.css?v=27">
 
   <style>
     header nav a[href="https://pf.kakao.com/_Xhxdxon"],
@@ -88,5 +92,17 @@
     <p class="copyright">Copyright © NEO STUDY. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('header nav a, .header nav a').forEach(function (a) {
+      var text = (a.textContent || '').replace(/\s/g, '');
+      if (text === '1:1문의' || a.getAttribute('href') === 'https://pf.kakao.com/_Xhxdxon') {
+        a.remove();
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
