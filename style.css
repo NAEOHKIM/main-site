@@ -230,3 +230,10 @@ nav a:hover{border-color:#aac4ea;color:var(--blue)}
   background:transparent !important;
   border:0 !important;
 }
+
+
+/* v25 mobile nav fix: hide contact nav item in header */
+header nav a[href="https://pf.kakao.com/_Xhxdxon"],
+.header nav a[href="https://pf.kakao.com/_Xhxdxon"]{
+  display:none !important;
+}
